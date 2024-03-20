@@ -1,9 +1,9 @@
 
 
 {
-  "name": "Chirpy",
-  "short_name": "Chirpy",
-  "description": "A minimal, responsive and feature-rich Jekyll theme for technical writing.",
+  "name": "Hyunbenny",
+  "short_name": "Hyunbenny",
+  "description": "개발, 백엔드, 자바, 스프링, 젠킨스, 도커, 운영체제, 자료구조, 알고리즘, 네트워크, 디자인패턴",
   "icons": [
     {
       "src": "/assets/img/favicons/android-chrome-192x192.png",
