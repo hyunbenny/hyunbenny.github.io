@@ -1,0 +1,9 @@
+name: 'Automatic build'
+ on:
+ push:
+     branches:
+     - main          # 이 부분을 꼭 master에서 main으로 수정해줍니다.
+     paths-ignore:
+     - .gitignore
+     - README.md
+     - LICENSE
