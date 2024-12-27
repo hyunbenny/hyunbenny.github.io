@@ -729,13 +729,11 @@ $btn-mb: 0.5rem;
 
   #avatar {
     display: block;
-    width: 220px;
+    width: 7rem;
     height: 7rem;
-    object-fit: cover;
     overflow: hidden;
     box-shadow: var(--avatar-border-color) 0 0 0 2px;
     transform: translateZ(0); /* fixed the zoom in Safari */
-    border-radius: 20%
 
     img {
       transition: transform 0.5s;
