@@ -17,7 +17,7 @@
       btn.textContent = theme === "hyunbenny-dark" ? "☀️ 라이트 모드" : "🌙 다크 모드";
     }
     var saved = localStorage.getItem(KEY);
-    if (saved === "hyunbenny-dark") { apply(saved); }
+    apply(saved === "hyunbenny-dark" ? "hyunbenny-dark" : "hyunbenny");
     btn.addEventListener("click", function() {
       var next = (localStorage.getItem(KEY) === "hyunbenny-dark") ? "hyunbenny" : "hyunbenny-dark";
       localStorage.setItem(KEY, next);
