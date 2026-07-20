@@ -28,6 +28,13 @@ back_to_top_text: "맨 위로 ↑"
 
 footer_content: 'Copyright &copy; hyunbenny. 공부한 내용을 끄적거리는 낙서장입니다.'
 
+# 레이아웃을 생략한 태그·About·카테고리 페이지에도 테마 셸을 적용한다.
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: default
+
 plugins:
   - jekyll-seo-tag
   - jekyll-sitemap
