@@ -10,18 +10,37 @@
 </div>
 <script>
   (function() {
+    if (window.hyunbennyThemeInitialized) { return; }
+    window.hyunbennyThemeInitialized = true;
+
     var KEY = "hyunbenny-theme";
-    var btn = document.querySelector(".js-toggle-dark-mode");
-    function apply(theme) {
-      if (window.jtd && jtd.setTheme) { jtd.setTheme(theme); }
-      btn.textContent = theme === "hyunbenny-dark" ? "☀️ 라이트 모드" : "🌙 다크 모드";
+
+    function initThemeToggle() {
+      var buttons = document.querySelectorAll(".js-toggle-dark-mode");
+
+      function apply(theme) {
+        if (window.jtd && jtd.setTheme) { jtd.setTheme(theme); }
+        Array.prototype.forEach.call(buttons, function(button) {
+          button.textContent = theme === "hyunbenny-dark" ? "☀️ 라이트 모드" : "🌙 다크 모드";
+        });
+      }
+
+      var saved = localStorage.getItem(KEY);
+      apply(saved === "hyunbenny-dark" ? "hyunbenny-dark" : "hyunbenny");
+
+      Array.prototype.forEach.call(buttons, function(button) {
+        button.addEventListener("click", function() {
+          var next = (localStorage.getItem(KEY) === "hyunbenny-dark") ? "hyunbenny" : "hyunbenny-dark";
+          localStorage.setItem(KEY, next);
+          apply(next);
+        });
+      });
     }
-    var saved = localStorage.getItem(KEY);
-    apply(saved === "hyunbenny-dark" ? "hyunbenny-dark" : "hyunbenny");
-    btn.addEventListener("click", function() {
-      var next = (localStorage.getItem(KEY) === "hyunbenny-dark") ? "hyunbenny" : "hyunbenny-dark";
-      localStorage.setItem(KEY, next);
-      apply(next);
-    });
+
+    if (document.readyState === "loading") {
+      document.addEventListener("DOMContentLoaded", initThemeToggle);
+    } else {
+      initThemeToggle();
+    }
   })();
 </script>
