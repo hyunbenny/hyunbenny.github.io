@@ -1,3 +1,6 @@
 source "https://rubygems.org"
-gem "minimal-mistakes-jekyll"
-gemspecs
+
+gem "jekyll", "~> 4.3"
+gem "just-the-docs", "~> 0.12"
+gem "jekyll-sitemap"
+gem "webrick"

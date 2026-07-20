@@ -1,0 +1,27 @@
+<div class="nav-profile">
+  <a href="{{ '/about/' | relative_url }}" class="nav-profile-link">
+    <img class="nav-profile-img" src="{{ '/assets/images/profile.jpg' | relative_url }}" alt="HYUNBIN CHO">
+    <span class="nav-profile-text">
+      <span class="nav-profile-name">HYUNBIN CHO</span>
+      <span class="nav-profile-mail">bluesky3268@naver.com</span>
+    </span>
+  </a>
+  <button class="btn js-toggle-dark-mode theme-toggle" type="button">🌙 다크 모드</button>
+</div>
+<script>
+  (function() {
+    var KEY = "hyunbenny-theme";
+    var btn = document.querySelector(".js-toggle-dark-mode");
+    function apply(theme) {
+      if (window.jtd && jtd.setTheme) { jtd.setTheme(theme); }
+      btn.textContent = theme === "hyunbenny-dark" ? "☀️ 라이트 모드" : "🌙 다크 모드";
+    }
+    var saved = localStorage.getItem(KEY);
+    if (saved === "hyunbenny-dark") { apply(saved); }
+    btn.addEventListener("click", function() {
+      var next = (localStorage.getItem(KEY) === "hyunbenny-dark") ? "hyunbenny" : "hyunbenny-dark";
+      localStorage.setItem(KEY, next);
+      apply(next);
+    });
+  })();
+</script>

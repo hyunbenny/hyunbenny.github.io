@@ -1,0 +1,10 @@
+---
+layout: default
+---
+<h1 class="post-title">{{ page.title }}</h1>
+<p class="post-meta-line">
+  <span class="post-date">{{ page.date | date: "%Y-%m-%d" }}</span>
+  {% if page.tags %}{% for tag in page.tags %}<a class="tag-pill" href="{{ '/tags/' | relative_url }}#{{ tag | slugify }}">{{ tag }}</a>{% endfor %}{% endif %}
+</p>
+
+{{ content }}

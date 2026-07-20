@@ -1,0 +1,130 @@
+// ===== 게시글 메타(날짜·태그) =====
+.post-meta-line {
+  margin: -0.25rem 0 1.5rem;
+  font-size: 0.75rem !important;
+  color: $grey-dk-000;
+
+  .post-date {
+    letter-spacing: 0.03em;
+    margin-right: 0.35rem;
+  }
+}
+
+// ===== 태그 알약 =====
+.tag-pill {
+  display: inline-block;
+  background: rgba($link-color, 0.09);
+  color: $link-color;
+  border-radius: 999px;
+  padding: 0.1rem 0.6rem;
+  margin: 0 0.25rem 0.25rem 0;
+  font-size: 0.6875rem !important;
+  font-weight: 600;
+  text-decoration: none;
+
+  &:hover {
+    background: rgba($link-color, 0.16);
+    text-decoration: none;
+  }
+
+  .tag-count {
+    display: inline-block;
+    background: $link-color;
+    color: $sidebar-color;
+    border-radius: 999px;
+    padding: 0 0.4rem;
+    margin-left: 0.25rem;
+    font-size: 0.625rem !important;
+    font-weight: 700;
+  }
+}
+
+.tag-cloud .tag-pill {
+  font-size: 0.8125rem !important;
+  padding: 0.35rem 0.9rem;
+}
+
+// ===== 태그 섹션 목록 =====
+.tag-post-list {
+  list-style: none;
+  padding-left: 0;
+
+  li {
+    border-bottom: 1px solid $border-color;
+    padding: 0.6rem 0.1rem;
+
+    .tag-post-date {
+      color: $grey-dk-000;
+      font-size: 0.75rem !important;
+      margin-left: 0.5rem;
+    }
+  }
+  li:first-child { border-top: 1px solid $border-color; }
+}
+
+// ===== 사이드바 프로필 =====
+.nav-profile {
+  padding: 1rem 2rem;
+  border-top: 1px solid $border-color;
+
+  .nav-profile-link {
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+    text-decoration: none;
+    margin-bottom: 0.75rem;
+  }
+  .nav-profile-img {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 1px solid $border-color;
+  }
+  .nav-profile-text { display: flex; flex-direction: column; line-height: 1.35; }
+  .nav-profile-name { font-size: 0.8125rem !important; font-weight: 600; color: $body-heading-color; }
+  .nav-profile-mail { font-size: 0.6875rem !important; color: $grey-dk-000; }
+}
+
+// ===== About 카드 =====
+.about-card {
+  display: flex;
+  gap: 1.5rem;
+  align-items: flex-start;
+  padding: 1.5rem;
+  background: $sidebar-color;
+  border: 1px solid $border-color;
+  border-radius: 12px;
+  margin: 1.5rem 0;
+
+  .about-photo {
+    width: 120px;
+    height: 120px;
+    border-radius: 16px;
+    object-fit: cover;
+    flex-shrink: 0;
+  }
+  h2 { margin-top: 0 !important; }
+  ul { list-style: none; padding-left: 0; margin-bottom: 0; }
+  li { margin-bottom: 0.3rem; }
+}
+
+// ===== 홈 최근 글 목록 =====
+.recent-list {
+  list-style: none;
+  padding-left: 0;
+
+  li {
+    border-bottom: 1px solid $border-color;
+    padding: 0.7rem 0.1rem;
+  }
+  li:first-child { border-top: 1px solid $border-color; }
+  .recent-date { color: $grey-dk-000; font-size: 0.75rem !important; margin-right: 0.6rem; }
+}
+
+// ===== 다크 모드 토글 버튼 =====
+.nav-profile .theme-toggle {
+  font-size: 0.6875rem !important;
+  padding: 0.25rem 0.75rem;
+  width: 100%;
+}
