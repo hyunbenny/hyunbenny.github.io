@@ -1,10 +1,10 @@
 ---
-title: Tags
-nav_order: 3
+title: 태그
+nav_order: 2
 permalink: /tags/
 ---
 
-# Tags
+# 태그
 
 태그를 누르면 해당 태그가 걸린 게시글 목록으로 이동합니다.
 
